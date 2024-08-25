@@ -1,0 +1,66 @@
+* {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+header {
+	text-align: center;
+	background-color: silver;
+	padding: 16px;
+}
+
+footer {
+	padding: 8px;
+	background-color: silver;
+	text-align: center;
+}
+
+.main {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.main .menu {
+	border: 1px solid black;
+	margin: 16px;
+}
+
+.main .canvas {
+	border: 1px solid black;
+	width: 75vw;
+	height: 75vw;
+	margin: 16px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.canvas .square-grid {
+	border: 1px solid black;
+}
+
+.menu .change-canvas-grid {
+	display: flex;
+	font-size: 32px;
+	align-items: center;
+	margin: 16px;
+}
+
+.change-canvas-grid input {
+	width: 64px;
+	margin: 8px;
+	font-size: 32px;
+}
+
+.change-canvas-grid button {
+	font-size: 32px;
+}
