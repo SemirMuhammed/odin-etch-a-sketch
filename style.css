@@ -36,16 +36,27 @@ footer {
 }
 
 .main .canvas {
+	box-sizing: content-box;
 	border: 1px solid black;
-	width: 75vw;
-	height: 75vw;
 	margin: 16px;
 	display: flex;
+	flex-grow: 1;
 	flex-wrap: wrap;
 }
 
 .canvas .square-grid {
 	border: 1px solid black;
+}
+
+/* Algorithm To adjust height and make it square */
+.canvas .square-grid:after {
+	content: "";
+	display: block;
+	padding-bottom: 100%;
+}
+
+.fill-color {
+	background-color: black;
 }
 
 .menu .change-canvas-grid {
