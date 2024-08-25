@@ -26,7 +26,7 @@ footer {
 
 .main {
 	display: flex;
-	justify-content: space-around;
+	/*justify-content: space-around;*/
 	flex-wrap: wrap;
 }
 
@@ -35,12 +35,15 @@ footer {
 	margin: 16px;
 }
 
-.main .canvas {
-	box-sizing: content-box;
-	border: 1px solid black;
+.main .display {
+	border: 3px solid black;
+	border-radius: 8px;
 	margin: 16px;
+	flex-basis: 85vh;
+}
+
+.display .canvas {
 	display: flex;
-	flex-grow: 1;
 	flex-wrap: wrap;
 }
 
@@ -56,22 +59,49 @@ footer {
 }
 
 .fill-color {
-	background-color: black;
+	background-color: rgb(red, green, blue);
 }
 
 .menu .change-canvas-grid {
 	display: flex;
-	font-size: 32px;
 	align-items: center;
-	margin: 16px;
+	flex-direction: column;
+}
+
+.change-canvas-grid h2 {
+	font-size: 32px;
 }
 
 .change-canvas-grid input {
-	width: 64px;
-	margin: 8px;
+	margin-top: 8px;
+}
+
+.change-canvas-grid p {
+	font-size: 20px;
+}
+
+.change-fill-color {
 	font-size: 32px;
 }
 
-.change-canvas-grid button {
+.change-fill-color input {
+	border: transparent;
+}
+
+
+.menu .grid-modes {
+	display: flex;
+	flex-direction: column;
+}
+
+.grid-modes h2 {
+	text-align: center;
 	font-size: 32px;
+	font-weight: bold;
+}
+
+.grid-modes .rainbow,
+.grid-modes .darken {
+	font-size: 20px;
+	padding: 8px;
 }

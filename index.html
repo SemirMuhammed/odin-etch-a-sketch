@@ -13,15 +13,31 @@
 		<h1>Etch-a-Sketch</h1>
 	</header>
 	<div class="main">
-		<div class="menu">
-			<div class="change-canvas-grid">
-				<label for="grid-size">Grid</label>
-				<input id="grid-size" name="grid-size" value="16">
-				<button type="button" id="change-grid-btn">Change</button>
-			</div>
-
+		<div class="display">
+			<div class="canvas" id="canvas"></div>
 		</div>
-		<div class="canvas" id="canvas"></div>
+		<div class="menu">
+			<div class="grid-modes">
+				<h2>Modes</h2>
+				<div class="rainbow">
+					<input type="checkbox" name="rainbow" id="rainbow">
+					<label for="rainbow">Rainbow Mode</label>
+				</div>
+				<div class="darken">
+					<input type="checkbox" name="darken" id="daken">
+					<label for="darken">Darken Effect</label>
+				</div>
+			</div>
+			<div class="change-canvas-grid">
+				<h2>Grid</h2>
+				<input type="range" name="grid-size" id="grid-size" min="1" max="100" value="16">
+				<p>16</p>
+			</div>
+			<div class="change-fill-color">
+				<label for="fill-color">🎨</label>
+				<input type="color" name="fill-color" id="fill-color">
+			</div>
+		</div>
 	</div>
 	<footer>
 		<p>

@@ -28,9 +28,21 @@ drawCanvas(true);
 
 // Change Canvas Grid
 
-const changeGridBtn = document.getElementById("change-grid-btn");
+const gridSize = document.getElementById("grid-size");
+const gridSizeDisplay = document.querySelector(".change-canvas-grid p");
+let isSizing = false;
 
-changeGridBtn.addEventListener("click", drawCanvas);
+gridSize.addEventListener("mousedown", () => isSizing = true)
+gridSize.addEventListener("mousemove", () => {
+	if (!isSizing) return;
+
+	gridSizeDisplay.textContent = gridSize.value;
+});
+window.addEventListener("mouseup", () => isSizing = false);
+gridSize.addEventListener("click", () => {
+	gridSizeDisplay.textContent = gridSize.value;
+	drawCanvas()
+});
 
 // Draw on Canvas
 
@@ -41,9 +53,23 @@ canvas.addEventListener("mousedown", () => isDrawing = true)
 canvas.addEventListener("mousemove", (event) => {
 	if (!isDrawing) return;
 
-	event.target.classList.add("fill-color");
+	let color = "black";
+	const rainbow = document.getElementById("rainbow");
+
+	if (rainbow.checked) {
+		const randomRed = (Math.random() * 255).toFixed();
+		const randomBlue = (Math.random() * 255).toFixed();
+		const randomGreen = (Math.random() * 255).toFixed();
+
+		color = `rgb(${randomRed}, ${randomBlue}, ${randomGreen})`;
+	}
+	else {
+		color = document.getElementById("fill-color").value;
+	}
+
 	window.getSelection().removeAllRanges();
+	event.target.style.backgroundColor = color;
 })
 
-window.addEventListener("mouseup", () => isDrawing = false)
-window.addEventListener("contextmenu", (event) => event.preventDefault())
+window.addEventListener("mouseup", () => isDrawing = false);
+canvas.addEventListener("contextmenu", (event) => event.preventDefault());
