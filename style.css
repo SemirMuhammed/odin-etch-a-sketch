@@ -14,8 +14,10 @@ body {
 
 header {
 	text-align: center;
-	background-color: silver;
-	padding: 16px;
+	padding: 16px 0;
+	background-color: #12343b;
+	color: white;
+	font-size: 1.8em;
 }
 
 footer {
@@ -26,13 +28,20 @@ footer {
 
 .main {
 	display: flex;
-	/*justify-content: space-around;*/
+	flex-direction: row-reverse;
+	justify-content: center;
 	flex-wrap: wrap;
+	align-items: center;
+	gap: 16px;
+	background-color: #fff5d7;
 }
 
 .main .menu {
-	border: 1px solid black;
-	margin: 16px;
+	border: 5px solid black;
+	padding: 16px;
+	margin: 16px 0;
+	border-radius: 16px;
+	background-color: #f6f5f3;
 }
 
 .main .display {
@@ -47,61 +56,53 @@ footer {
 	flex-wrap: wrap;
 }
 
-.canvas .square-grid {
+.grid-show {
 	border: 1px solid black;
 }
 
 /* Algorithm To adjust height and make it square */
 .canvas .square-grid:after {
+	border-color: rgba(0, 0, 0, 100%);
 	content: "";
 	display: block;
 	padding-bottom: 100%;
 }
 
-.fill-color {
-	background-color: rgb(red, green, blue);
-}
-
+.menu .color-pick,
 .menu .change-canvas-grid {
 	display: flex;
-	align-items: center;
 	flex-direction: column;
 }
 
-.change-canvas-grid h2 {
-	font-size: 32px;
+.pen-color,
+.bg-color {
+	font-size: 24px;
 }
 
-.change-canvas-grid input {
-	margin-top: 8px;
-}
-
-.change-canvas-grid p {
-	font-size: 20px;
-}
-
-.change-fill-color {
-	font-size: 32px;
-}
-
-.change-fill-color input {
+.pen-color input,
+.bg-color input {
 	border: transparent;
+	height: 24px;
+	width: 24px;
 }
-
 
 .menu .grid-modes {
 	display: flex;
 	flex-direction: column;
+	gap: 8px;
+	margin: 8px;
 }
 
-.grid-modes h2 {
-	text-align: center;
-	font-size: 32px;
-	font-weight: bold;
-}
-
-.grid-modes .rainbow,
-.grid-modes .darken {
+.grid-modes button {
 	font-size: 20px;
-	padding: 8px;
+	font-weight: 900;
+	border-radius: 8px;
+	padding: 4px;
+	background-color: #cdfee4;
+
+}
+
+.change-canvas-grid {
+	font-size: 18px;
+	text-align: center;
 }
