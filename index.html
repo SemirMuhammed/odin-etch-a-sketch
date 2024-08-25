@@ -28,12 +28,16 @@
 				</div>
 			</div>
 			<div class="grid-modes">
-				<button type="button" id="color-mode">Color Mode</button>
-				<button type="button" id="rainbow">Rainbow Mode</button>
-				<button type="button" id="shadow">Shadow Mode</button>
-				<button type="button" id="hide-grid">Grid Mode</button>
-				<button type="button" id="eraser">Eraser Mode</button>
-				<button type="button" id="clear-canvas">Clear Canvas</button>
+				<div class="color-modes">
+					<button type="button" id="color-mode" title="Linear Color Mode">🎨</button>
+					<button type="button" id="rainbow" title="Rainbow Color Mode">🌈</button>
+					<button type="button" id="eraser" title="Eraser">🧹</button>
+					<button type="button" id="clear-canvas" title="! Clear Canvas">❌</button>
+				</div>
+				<button type="button" id="shadow"
+					title="Changes the opacity and makes it transparent and opaque when you draw">Shadow
+					Rainbow</button>
+				<button type="button" id="hide-grid">Show Grid</button>
 			</div>
 			<div class="change-canvas-grid">
 				<p>16 x 16</p>
@@ -45,7 +49,8 @@
 		<p>
 			Copyright 2024 SemirMuhammed
 			<a href="https://github.com/semirmuhammed/odin-etch-a-sketch" target="_blank"
-				rel="noopener noreferrer">Github</a>
+				rel="noopener noreferrer"><img src="github-logo.svg" alt="GitHub Logo"
+					class="github"></a>
 		</p>
 	</footer>
 	<script src="main.js"></script>
